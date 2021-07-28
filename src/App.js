@@ -61,21 +61,17 @@ export default function App() {
       <h3>Translation will come here 👇</h3>
       <h2>{meaning}</h2>
       <hr></hr>
-      <h4>Emojis we know</h4>
-      <ul>
+      <h4>Frequently used emojis</h4>
+      <ul className="EmojiCollection">
         {emojiWeHave.map((emoji, index) => {
           return (
-            <span
+            <li
+              className="Emoji"
               key={emoji}
-              style={{
-                fontSize: "2rem",
-                padding: "2rem 2rem",
-                cursor: "pointer"
-              }}
               onClick={() => emojiClickHandler(emoji)}
             >
               {emoji}
-            </span>
+            </li>
           );
         })}
       </ul>

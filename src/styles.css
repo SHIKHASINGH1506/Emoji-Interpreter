@@ -9,3 +9,21 @@ input {
 body {
   background-color: #fecaca;
 }
+.EmojiCollection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.EmojiCollection li {
+  display: inline;
+  list-style: none;
+  margin: 1rem 1rem 0 0;
+}
+.Emoji {
+  font-size: 2rem;
+  box-shadow: 0 1px 5px black;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
