@@ -3,15 +3,30 @@ import "./styles.css";
 
 export default function App() {
   const emojiDictionary = {
-    "😊": "Smilling",
-    "😀": "Happy",
-    "🤓": "Nerd Face",
-    "😞": "Dissapointment",
-    "❤️": "Heart",
-    "🥺": "Pleading Face",
-    "🔥": "Fire",
-    "😰": "Anxious",
-    "🎁": "Wrapped Gift"
+    "🐒": "Monkey",
+    "🐶": "Dog",
+    "🦧": "Orangutan",
+    "🦍": "Gorilla",
+    "🦊": "Fox",
+    "🐺": "Wolf",
+    "🦄": "Unicorn",
+    "🐮": "Cow",
+    "🐷": "Pig",
+    "🐐": "Goat",
+    "🐁": "Mouse",
+    "🐿️": "Chipmunk",
+    "🐻": "Bear",
+    "🐔": "Chicken",
+    "🦆": "Duck",
+    "🦚": "Peacock",
+    "🐸": "Frog",
+    "🦜": "Parrot",
+    "🐬": "Dolphin",
+    "🦋": "Butterfly",
+    "🦈": "Shark",
+    "🐜": "Ant",
+    "🕸️": "Spider Web",
+    "🐙": "Octopus"
   };
   //convert object to array
   var emojiWeHave = Object.keys(emojiDictionary);
@@ -35,10 +50,17 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>inside out!</h1>
-      <input onChange={emojiInputHandler}></input>
+      <h1>
+        <em>Animoji!</em>
+      </h1>
+      <input
+        style={{ borderRadius: "1rem", outline: "none" }}
+        placeholder="Paste animal emoji here to see the exact meaning"
+        onChange={emojiInputHandler}
+      ></input>
+      <h3>Translation will come here 👇</h3>
       <h2>{meaning}</h2>
-      <br />
+      <hr></hr>
       <h4>Emojis we know</h4>
       <ul>
         {emojiWeHave.map((emoji, index) => {
@@ -47,7 +69,7 @@ export default function App() {
               key={emoji}
               style={{
                 fontSize: "2rem",
-                padding: "0.5rem",
+                padding: "2rem 2rem",
                 cursor: "pointer"
               }}
               onClick={() => emojiClickHandler(emoji)}
