@@ -55,7 +55,7 @@ export default function App() {
       </h1>
       <input
         style={{ borderRadius: "1rem", outline: "none" }}
-        placeholder="Paste animal emoji here to see the exact meaning"
+        placeholder="Search animal emoji here..."
         onChange={emojiInputHandler}
       ></input>
       <h3>Translation will come here 👇</h3>
